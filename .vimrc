@@ -1,7 +1,7 @@
 filetype plugin indent on
 
 " Key mappings
-noremap <C-[> <Esc>|											  "Remap C-[ to enter normal mode
+imap jk <Esc>|                                                    "Remap jk to exit insert move
 nnoremap ; :|                                                     "Remap ; to start command
 nnoremap <SPACE> <Nop>|                                           "Remap leader to space
 let mapleader = " "|
@@ -60,8 +60,6 @@ set foldnestmax=10      "Deepest fold is 10 levels
 set nofoldenable        "Don't fold by default
 set foldlevel=1
 
-" Python3 version
-" set pythonthreedll = 'C:\Users\lukab\AppData\Local\Programs\Python\Python38-32\python38.dll'
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -84,3 +82,6 @@ nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>|  "Go to definition on gd
 " fzf
 nnoremap <silent> <C-f> :Files<CR>| "File search with ctrl-f
 let g:fzf_preview_window = ''      "No preview window
+
+" NerdTree
+let g:NERDTreeShowHidden=1
